@@ -1,26 +1,22 @@
 import './App.css';
+import Login from './components/Login';
 import HelloWorld from './components/Navbar';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
-      <HelloWorld test={'test'} />
-      </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login />}>
+        <Route path = "/HelloWorld" index element={<HelloWorld/>} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
-const array = [0,1,3];
 
-console.log(...array);
-
-const Person = {
-  Name: "yan",
-  age:"70"
-}
-
-const Yassine = {
-  name: "Yassine",
-    ...Person
-}
-
-console.log(Yassine)
 export default App;

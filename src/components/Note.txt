@@ -112,6 +112,33 @@ bibliothèque css tailwin etc
 
 NE PAS METTRE DE VAR
 
+Un menu / un tableau de bord (possibilité d'editer une ligne / arrivé sur une page de connexion (pas forcement inscription)
+
+Un css par composant 
+
+créer le template du rendu finale 
+
+MERN = MANGO EXPRESS REACT node
+
+
+
+-----------------------------------------------------------------------
+
+const array = [0,1,3];
+
+console.log(...array);
+
+const Person = {
+  Name: "yan",
+  age:"70"
+}
+
+const Yassine = {
+  name: "Yassine",
+    ...Person
+}
+
+console.log(Yassine)
 
 
 
