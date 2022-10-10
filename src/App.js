@@ -6,14 +6,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Dashboard from './components/DashBoard';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />}>
-        <Route path = "/HelloWorld" index element={<HelloWorld/>} />
-      </Route>
+      <Route path="/" element={<Login />}/>
+      <Route path="/Dashboard" element={<Dashboard/>} />
     </Routes>
   </BrowserRouter>
   );
