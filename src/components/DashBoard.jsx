@@ -1,56 +1,56 @@
-import ReactDOM from "react-dom";
 import React, { useState, useRef } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
 
+
 function Dashboard() {
 
-    const [rowData, setRowData] = useState([
-        {Marque: "", Modele: "", Prix:"" },
-    ]);
+    const [rowData, setRowData] = useState({ Marque: "", Modele: "", Prix: "" });
 
-    const [rowDatas, setrowDatas] = useState([])
+    const [rowDatas, setRowDatas] = useState([]);
 
-    const gridref = useRef();
+    const gridRef = useRef();
 
     const inputChanged = (event) => {
-        setRowData({...rowData, [event.target.name]: event.target})
+        setRowData({ ...rowData, [event.target.name]: event.target.value })
     };
+
     const addCar = (event) => {
-        setrowDatas([...rowDatas,]);
+        setRowDatas([...rowDatas, rowData]);
     };
+
     const deleteCar = () => {
-        if (gridref.current.getSelectedNodes().length>0) {
-            setrowDatas(rowDatas.filter((car, index) =>     index !== gridref.current.getSelectedNodes()[0].child.Index));
-        }
-        else {
-            alert("veuillez selectionner une ligne avant de supprimer");
+        if (gridRef.current.getSelectedNodes().length > 0) {
+            setRowDatas(rowDatas.filter((car, index) =>
+                index !== gridRef.current.getSelectedNodes()[0].childIndex));
+        } else {
+            alert("Selectioner une ligne!");
         }
     };
 
-    const colomn = [
-        {headerName: "Marque", field: "marque"},
-        {headerName: "Modele", field: "modele"},
-        {headerName: "prix", field: "prix"}
-    ];
+    const column = [
+        { headerName: "Marque", field: "marque" },
+        { headerName: "Modele", field: "modele" },
+        { headerName: "Prix", field: "prix" },
+    ]
+
     return (
         <div>
-            <input type= "text" OnChange={inputChanged} placeholder="Marque" value={rowData.Marque}/>
-            <input type= "text" OnChange={inputChanged} placeholder="Modele" value={rowData.Marque}/>
-            <input type= "text" OnChange={inputChanged} placeholder="Prix" value={rowData.Marque}/>
-            <button onClick={addCar} Ajouter/>
-            <button onClick={deleteCar} supr/>
-        
-        <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
-            <AgGridReact
-                rowData={rowData}
-                ref = {gridref}
-                onGridReady= {params => gridref.current=params.api}
-                columnDefs={colomn}>
-            </AgGridReact>
-        </div>
+            <input type="text" onChange={inputChanged} placeholder="Marque" name="Marque" value={rowData.Marque} />
+            <input type="text" onChange={inputChanged} placeholder="Modele" name="Modele" value={rowData.Modele} />
+            <input type="number" onChange={inputChanged} placeholder="Prix" name="Prix" value={rowData.Prix} />
+            <button onClick={addCar}>Ajouter</button>
+            <button onClick={deleteCar}>Supprimer</button>
+            <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
+                <AgGridReact
+                    rowData={rowDatas}
+                    ref={gridRef}
+                    onGridReady={params => gridRef.current = params.api}
+                    columnDefs={column}>
+                </AgGridReact>
+            </div>
         </div>
     )
 }
