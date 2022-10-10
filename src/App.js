@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='App'>
+      <HelloWorld test={'test'} />
+      </div>
   );
 }
+const array = [0,1,3];
 
+console.log(...array);
+
+const Person = {
+  Name: "yan",
+  age:"70"
+}
+
+const Yassine = {
+  name: "Yassine",
+    ...Person
+}
+
+console.log(Yassine)
 export default App;
