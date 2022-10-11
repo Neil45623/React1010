@@ -20,14 +20,14 @@ input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
   font-size: 15px;
-  background: red;
-  border: 1px solid red;
+  background: blue;
+  border: 1px solid blue;
   color: #fff;
   padding: 10px 20px;
 }
 
 input[type="submit"]:hover {
-  background: red;
+  background: black;
 }
 
 .button {

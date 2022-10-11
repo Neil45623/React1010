@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    justify-content: center;
+  }
+
+.tablix {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: gray;
+}
+
