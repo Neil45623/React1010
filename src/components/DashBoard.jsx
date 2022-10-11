@@ -46,6 +46,7 @@ function Dashboard() {
             <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
                 <AgGridReact
                     rowData={rowDatas}
+                    rowSelection="multiple"
                     ref={gridRef}
                     onGridReady={params => gridRef.current = params.api}
                     columnDefs={column}>

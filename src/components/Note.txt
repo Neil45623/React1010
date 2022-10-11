@@ -84,6 +84,7 @@ composant enfant : this.props
 
 
 
+
 -----------------------------------------------------------------------
 
 Transpilation = à définir dans le projet
