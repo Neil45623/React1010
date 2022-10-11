@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./Login.module.css";
+import Navbar from "./Navbar";
+
 
 function Login() {
 
@@ -23,7 +25,8 @@ function Login() {
 
   // JSX code for login form
   const renderForm = (
-    <div className={style.loginform}>
+   <div className={style.loginform}>
+    
       <form onSubmit={handleSubmit}>
         <div className={style.inputcontainer}>
           <label>Identifiant </label>
@@ -43,7 +46,9 @@ function Login() {
   );
 
   return (
+    
     <div className={style.form}>
+            <div><Navbar></Navbar></div>
       <div className={style.loginform}>
         <div className={style.title}>Connexion</div>
         {isSubmitted ? <div>Vous êtes bien connecté</div> : renderForm}

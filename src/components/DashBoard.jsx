@@ -3,6 +3,7 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import style from "./Dashboard.module.css";
+import Navbar from './Navbar';
 
 
 
@@ -32,14 +33,16 @@ function Dashboard() {
     };
 
     const column = [
-        { headerName: "Marque", field: "marque" },
-        { headerName: "Modele", field: "modele" },
-        { headerName: "Prix", field: "prix" },
+        { headerName: "Marque", field: "Marque" },
+        { headerName: "Modele", field: "Modele" },
+        { headerName: "Prix", field: "Prix" },
     ]
 
     return (
+        
         <div className={style.tablix}>
-            <div className={style.button}>
+            <div><Navbar></Navbar></div>
+            <div className={style.text}>
             <input type="text" onChange={inputChanged} placeholder="Marque" name="Marque" value={rowData.Marque} />
             <input type="text" onChange={inputChanged} placeholder="Modele" name="Modele" value={rowData.Modele} />
             <input type="number" onChange={inputChanged} placeholder="Prix" name="Prix" value={rowData.Prix} />
