@@ -4,22 +4,17 @@ import style from "./Chien.module.css";
 import getRandomBreed from "./Api";
 
 
-
-
 function Chien() {
     return (
-      <form>
-        <title className={style.titre}>Créer un chien</title>
-        <label className={style.race}>Race du chien
-          <input type="text" />
-        </label>
-        <p className={style.Age}>Age du chien
-          <input type="text" />
-        </p>
-        <p className={style.Prix}>Prix du chien
-          <input type="text" />
-        </p>
-      </form>
+        <><div className={style.Navbar2}><Navbar></Navbar></div><form>
+            <title className={style.titre}>Le chien</title>
+            <label className={style.race}>Race du chien
+            </label>
+            <p className={style.Age}>Age du chien
+            </p>
+            <p className={style.Prix}>Prix du chien
+            </p>
+        </form></>
     )
   }
 
