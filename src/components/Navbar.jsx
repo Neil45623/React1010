@@ -6,7 +6,10 @@ const linkStyle = {
     margin: "10px",
     cursor: "pointer",
     color: 'white',
-    background: "black"
+    background: "black",
+    fontsize: "15px",
+    padding: "10px 20px",
+    border: "1px solid blue"
 
   };
 
@@ -15,7 +18,9 @@ const linkStyle = {
     cursor: "pointer",
     color: 'white',
     background: "black",
-    fontsize: "15px"
+    fontsize: "15px",
+    padding: "10px 20px",
+    border: "1px solid blue"
   };
 
 const Navbar= () =>{

@@ -82,7 +82,10 @@ props = permet de faire passe rles infos dun composant parent a enfant
 
 composant enfant : this.props
 
+Promesse : 
 
+call back sert a  initialiser la promesse (sucess et failure suffise a initalisé) 
+.then permet de traiter la reponse obtenu par la promesse
 
 
 -----------------------------------------------------------------------
