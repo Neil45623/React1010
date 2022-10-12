@@ -27,7 +27,7 @@ const useInput = (validateValue) => {
   const inputBlurHandler = (event) => { 
 
     setIsTouched(true); 
-
+    console.log(isTouched)
   }; 
 //Ici on a une fonction qui efface le champs input 
   const reset = () => { 
