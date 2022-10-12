@@ -89,6 +89,20 @@ call back sert a  initialiser la promesse (sucess et failure suffise a initalis�
 
 UseInput = permet de simplifier la validation des formualires (value => value.trim() !== ''); (résultat est un booléen)
 
+a quoi sert asynch = 
+
+possman sert a travailler avec une api 
+
+API = interface de programmation (sert a faire dialoguer 2 application qui ne fonctionne pas de la meme maniere) 
+
+chaque API possède des requetes http
+
+
+JSON plus simple autiliser que XML
+
+Fetch ou axios pour discuter avec lapi
+
+pour tester on peut utiliser google chrome
 
 
 
@@ -127,6 +141,7 @@ Un css par composant
 créer le template du rendu finale 
 
 MERN = MANGO EXPRESS REACT node
+
 
 
 

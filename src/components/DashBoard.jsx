@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 
 function Dashboard() {
 
-    const [rowData, setRowData] = useState({ Marque: "", Modele: "", Prix: "" });
+    const [rowData, setRowData] = useState({ Race: "", Age: "", Prix: "" });
 
     const [rowDatas, setRowDatas] = useState([]);
 
@@ -19,11 +19,11 @@ function Dashboard() {
         setRowData({ ...rowData, [event.target.name]: event.target.value })
     };
 
-    const addCar = (event) => {
+    const addDog = (event) => {
         setRowDatas([...rowDatas, rowData]);
     };
 
-    const deleteCar = () => {
+    const deleteDog = () => {
         if (gridRef.current.getSelectedNodes().length > 0) {
             setRowDatas(rowDatas.filter((car, index) =>
                 index !== gridRef.current.getSelectedNodes()[0].childIndex));
@@ -33,8 +33,8 @@ function Dashboard() {
     };
 
     const column = [
-        { headerName: "Marque", field: "Marque" },
-        { headerName: "Modele", field: "Modele" },
+        { headerName: "Race", field: "Race" },
+        { headerName: "Age", field: "Age" },
         { headerName: "Prix", field: "Prix" },
     ]
 
@@ -42,12 +42,12 @@ function Dashboard() {
         <><div className={style.Navbar2}><Navbar></Navbar></div><div className={style.tablix}>
 
             <div className={style.text}>
-                <input type="text" onChange={inputChanged} placeholder="Marque" name="Marque" value={rowData.Marque} />
-                <input type="text" onChange={inputChanged} placeholder="Modele" name="Modele" value={rowData.Modele} />
+                <input type="text" onChange={inputChanged} placeholder="Race" name="Race" value={rowData.Marque} />
+                <input type="text" onChange={inputChanged} placeholder="Age" name="Age" value={rowData.Modele} />
                 <input type="number" onChange={inputChanged} placeholder="Prix" name="Prix" value={rowData.Prix} />
-                <button onClick={addCar}>Ajouter</button>
+                <button onClick={addDog}>Ajouter</button>
 
-                <button onClick={deleteCar}>Supprimer</button>
+                <button onClick={deleteDog}>Supprimer</button>
             </div>
             <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
                 <AgGridReact

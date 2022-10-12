@@ -42,7 +42,7 @@ const Navbar= () =>{
     
       <Link to="/Dashboard"style={linkStyle2}>Dashboard</Link>
 
-      <Link to="/Utilisateur"style={linkStyle3}>Utilisateur</Link>
+      <Link to="/Chien"style={linkStyle3}>Chien</Link>
     
   </div>
   );
