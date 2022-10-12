@@ -23,6 +23,16 @@ const linkStyle = {
     border: "1px solid blue"
   };
 
+  const linkStyle3 = {
+    margin: "10px",
+    cursor: "pointer",
+    color: 'white',
+    background: "black",
+    fontsize: "15px",
+    padding: "10px 20px",
+    border: "1px solid blue"
+  };
+
 const Navbar= () =>{
   return (
   <div>
@@ -31,6 +41,8 @@ const Navbar= () =>{
     
     
       <Link to="/Dashboard"style={linkStyle2}>Dashboard</Link>
+
+      <Link to="/Utilisateur"style={linkStyle3}>Utilisateur</Link>
     
   </div>
   );

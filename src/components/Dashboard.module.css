@@ -12,7 +12,12 @@
     gap: 30px;
     height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: gray;
+}
+.Navbar2 {
+  width: 70%;
+    margin-left: 40%;
+    margin-right: 15%;
+    margin-top: 2%;
 }
 
 

@@ -85,7 +85,11 @@ composant enfant : this.props
 Promesse : 
 
 call back sert a  initialiser la promesse (sucess et failure suffise a initalisé) 
-.then permet de traiter la reponse obtenu par la promesse
+.then permet de traiter la reponse obtenu par la 
+
+UseInput = permet de simplifier la validation des formualires (value => value.trim() !== ''); (résultat est un booléen)
+
+
 
 
 -----------------------------------------------------------------------

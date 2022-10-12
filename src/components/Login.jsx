@@ -46,14 +46,13 @@ function Login() {
   );
 
   return (
-    
-    <div className={style.form}>
-            <div><Navbar></Navbar></div>
+    <><div className={style.Navbar2}><Navbar></Navbar></div><div className={style.form}>
+
       <div className={style.loginform}>
         <div className={style.title}>Connexion</div>
         {isSubmitted ? <div>Vous êtes bien connecté</div> : renderForm}
       </div>
-    </div>
+    </div></>
   );
 
 

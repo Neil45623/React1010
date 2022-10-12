@@ -10,6 +10,21 @@ import Dashboard from './components/Dashboard';
 import menu from './components/Menu';
 import navbar from "./components/Navbar"
 
+export const loadRandomBreed = () => {
+  return (dispatch) => {
+    return fetch('https://dog.ceo/api/breeds/image/random')
+      .then(response => response.json())
+      .then(randomBreed => {
+        dispatch(getRandomBreed(randomBreed.message))
+      })
+      .catch(error => console.log(error));
+  };
+}
+const getRandomBreed = randomBreed => {
+  return {
+    randomBreed
+  }
+}
 function App() {
   return (
     <BrowserRouter>
@@ -24,3 +39,5 @@ function App() {
 }
 
 export default App;
+
+
