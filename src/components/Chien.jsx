@@ -17,8 +17,8 @@ function Chien() {
     <><div className={style.Navbar2}><Navbar></Navbar></div><>
 
           <div className={style.img2}>
-          <button className={style.button} onClick={getPic}>Next image</button>
-              <img src={dogPic} alt='Very important picture' />
+          <button className={style.button} onClick={getPic}>Prochaine image</button>
+              <img src={dogPic} alt='' />
           </div>
       </></>
   );

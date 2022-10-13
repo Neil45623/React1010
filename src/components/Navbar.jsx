@@ -1,48 +1,31 @@
+
 import React from 'react';
 import {  Link } from "react-router-dom";
 import styled from "styled-components";
+import style from "./Navbar.module.css"
 
 const linkStyle = {
     margin: "10px",
     cursor: "pointer",
     color: 'white',
     background: "black",
-    fontsize: "15px",
+    fontSize: "15px",
     padding: "10px 20px",
-    border: "1px solid blue"
-
+    border: "1px solid blue",
+  display: "inline-block"
   };
 
-  const linkStyle2 = {
-    margin: "10px",
-    cursor: "pointer",
-    color: 'white',
-    background: "black",
-    fontsize: "15px",
-    padding: "10px 20px",
-    border: "1px solid blue"
-  };
-
-  const linkStyle3 = {
-    margin: "10px",
-    cursor: "pointer",
-    color: 'white',
-    background: "black",
-    fontsize: "15px",
-    padding: "10px 20px",
-    border: "1px solid blue"
-  };
 
 const Navbar= () =>{
   return (
-  <div>
+  <div className={style.center}>
     
       <Link to="/" style={linkStyle}>Login</Link>
     
     
-      <Link to="/Dashboard"style={linkStyle2}>Dashboard</Link>
+      <Link to="/Dashboard"style={linkStyle}>Dashboard</Link>
 
-      <Link to="/Chien"style={linkStyle3}>Chien</Link>
+      <Link to="/Chien"style={linkStyle}>Chien</Link>
     
   </div>
   );
