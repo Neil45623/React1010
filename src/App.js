@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Dashboard from './components/Dashboard';
 import menu from './components/Menu';
-import navbar from "./components/Navbar"
+import Navbar from "./components/Navbar"
 import Chien from './components/Chien';
 
 function App() {
