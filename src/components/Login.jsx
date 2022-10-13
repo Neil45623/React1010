@@ -7,8 +7,8 @@ import Navbar from "./Navbar";
 function Login() {
 
   // Statut
-  const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessages] = useState({});
+  const [isSubmitted] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
