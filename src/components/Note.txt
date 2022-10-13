@@ -142,7 +142,7 @@ créer le template du rendu finale
 
 MERN = MANGO EXPRESS REACT node
 
-
+Lien netlify : https://extraordinary-platypus-d6ee3c.netlify.app
 
 
 -----------------------------------------------------------------------
